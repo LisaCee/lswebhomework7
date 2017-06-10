@@ -199,12 +199,21 @@ function makeCat(name, age) {
 	//add an age property to the object with the value set to the age argument
 	//add a method called meow that returns the string 'Meow!'
 	//return the object
+	var cat = {
+		name : name,
+		age : age,
+	};
+	cat.meow = function(){
+		return 'Meow!';
+	};
+	return cat;
 }
 
 function addProperty(object, property) {
 	//add the property to the object with a value of null
 	//return the object
 	//note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
+
 }
 
 function invokeMethod(object, method) {
@@ -232,7 +241,13 @@ function newUser(name, email, password) {
 function hasEmail(user) {
 	//return true if the user has a value for the property 'email'
 	//otherwise return false
-	if ('email' in user){
+}
+
+function hasProperty(object, property) {
+	//return true if the object has the value of the property argument
+	//property is a string
+	//otherwise return false
+	if(property in object){
 		return true;
 	}
 	else {
@@ -240,21 +255,22 @@ function hasEmail(user) {
 	}
 }
 
-function hasProperty(object, property) {
-	//return true if the object has the value of the property argument
-	//property is a string
-	//otherwise return false
-}
-
 function verifyPassword(user, password) {
 	//check to see if the provided password matches the password property on the user object
 	//return true if they match
 	//otherwise return false
+	if (user.password === user.password){
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 function updatePassword(user, newPassword) {
 	//replace the existing password on the user object with the value of newPassword
 	//return the object
+
 }
 
 function addFriend(user, newFriend) {
