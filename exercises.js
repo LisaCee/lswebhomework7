@@ -191,7 +191,14 @@ function averageTestScore(testScores) {
 function largestNumber(numbers) {
 	//numbers is an array of integers
 	//return the largest integer
+	var largest = 0;
 
+	for (var i = 0; i < numbers.length; i++){
+		if (numbers[i] > largest){
+			largest = numbers[i];
+		}
+	}
+	return largest;
 }
 
 function makeCat(name, age) {
@@ -221,6 +228,7 @@ function invokeMethod(object, method) {
 	//method is a string that contains the name of a method on the object
 	//invoke this method
 	//nothing needs to be returned
+
 
 }
 
@@ -271,7 +279,7 @@ function verifyPassword(user, password) {
 	//check to see if the provided password matches the password property on the user object
 	//return true if they match
 	//otherwise return false
-	if (user.password === user.password){
+	if (password === user.password){
 		return true;
 	}
 	else {
@@ -291,6 +299,8 @@ function addFriend(user, newFriend) {
 	//user has a property called friends that is an array
 	//add newFriend to the end of the friends array
 	//return the user object
+	user['friends'].push(newFriend);
+	return user;
 }
 
 function setUsersToPremium(users) {
@@ -298,6 +308,10 @@ function setUsersToPremium(users) {
 	//each user object has the property 'isPremium'
 	//set each user's isPremium property to true
 	//return the users array
+	for (var i = 0; i < users.length; i++){
+		users[i]['isPremium'] = true;
+	}
+	return users;
 }
 
 function sumUserPostLikes(user) {
@@ -306,6 +320,7 @@ function sumUserPostLikes(user) {
 	//each post object has an integer property called 'likes'
 	//sum together the likes from all the post objects
 	//return the sum
+
 }
 
 function addCalculateDiscountPriceMethod(storeItem) {
@@ -316,6 +331,10 @@ function addCalculateDiscountPriceMethod(storeItem) {
 	//price -> 20
 	//discountPercentage -> .2
 	//discountPrice = 20 - (20 * .2)
+	storeItem.calculateDiscountPrice = function(){
+		return storeItem.price - (storeItem.price * storeItem.discountPercentage);
+	};
+	return storeItem;
 }
 
 
