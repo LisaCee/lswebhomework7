@@ -228,8 +228,7 @@ function invokeMethod(object, method) {
 	//method is a string that contains the name of a method on the object
 	//invoke this method
 	//nothing needs to be returned
-
-
+	object[method]();
 }
 
 function multiplyMysteryNumberByFive(mysteryNumberObject) {
@@ -260,7 +259,12 @@ function newUser(name, email, password) {
 function hasEmail(user) {
 	//return true if the user has a value for the property 'email'
 	//otherwise return false
-
+	if (user.email){
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 function hasProperty(object, property) {
@@ -320,7 +324,12 @@ function sumUserPostLikes(user) {
 	//each post object has an integer property called 'likes'
 	//sum together the likes from all the post objects
 	//return the sum
+	var sum = 0;
 
+	for (var i = 0; i < user.posts.length; i++){
+		sum += user.posts[i].likes;
+	}
+	return sum;
 }
 
 function addCalculateDiscountPriceMethod(storeItem) {

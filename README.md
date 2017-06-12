@@ -4,9 +4,14 @@
 ---
 1. Feynman Writing Prompts - Write out explanations of the following concepts like you are explaining it to a 12 year old.  Doing this will help you quickly discover any holes in your understanding.  Ask your questions on Slack.
 		
-	* Array
+	* Array 
+	An array is a list of things stored under one heading (a variable).  
+	You can access an array item by using its heading and its position on the list (start counting up from 0).
 	* Object
+	An object is a collection of data pairs, a title and a value, stored under one heading (a variable).  
+	You can access a data set in an object by using its heading and the title of the pair.
 	* Method
+	A method is an action performed on an object.
 
 
 3. Fork and clone this repo.  When you need to commit use the following commands.
